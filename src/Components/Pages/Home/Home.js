@@ -13,7 +13,7 @@ const Home = () => {
                         key={food.service_id}
                         food={food} to={`/services/${food._id}`}
                     >
-                        {food.title}
+                        <p className='block lg:inline-flex'>{food.title}</p>
                     </Link>)
                 }
             </div>
