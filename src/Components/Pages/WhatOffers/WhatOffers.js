@@ -4,7 +4,7 @@ import farmbg from '../../../Assets/images/firmBG.png';
 const WhatOffers = () => {
     return (
         <div className=''>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 pt-20">
                 <div className="hero-content lg:w-4/5 mx-auto flex-col lg:flex-row-reverse">
                     <img src={farmbg} className="max-w-sm h-full rounded-lg shadow-2xl" alt='' />
                     <div>
