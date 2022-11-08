@@ -1,0 +1,9 @@
+.foodBg {
+    background:
+        linear-gradient(to top, rgba(245, 246, 252, 0.52), #000000),
+        url('../../../../Assets/BannerImages/serviceBG.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
