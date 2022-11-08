@@ -9,7 +9,7 @@ import nodeJsReq from '../../../Assets/images/nodejsReq.png';
 const Blog = () => {
     return (
         <>
-            <h1 className='text-5xl font-bold'><span className='text-primary'>Blog</span> Section</h1>
+            <h1 className='text-5xl font-bold pb-10'><span className='text-primary'>Blog</span> Section</h1>
             <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
