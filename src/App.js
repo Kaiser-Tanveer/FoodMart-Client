@@ -4,7 +4,7 @@ import router from './Components/Routes/Routes';
 
 function App() {
   return (
-    <div className="App" data-theme="cupcake">
+    <div className="App" data-theme="light">
       <RouterProvider router={router} />
     </div>
   );

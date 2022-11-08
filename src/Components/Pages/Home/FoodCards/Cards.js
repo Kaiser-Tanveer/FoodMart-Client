@@ -4,7 +4,7 @@ const Cards = ({ food }) => {
     console.log(food);
     const { img, title, description, price, review } = food;
     return (
-        <div className="card lg:w-2/3 mx-auto bg-base-100 shadow-xl image-full">
+        <div className="card lg:w-2/3 mx-auto bg-white-100 shadow-xl image-full">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
