@@ -3,34 +3,8 @@
         "service_id": "01",
         "title": "Rice",
         "img": "https://i.ibb.co/rHjjRky/rice.png",
-        "price": "20.00",
+        "price": "200.00",
         "description": "Rice is a rich source of carbohydrates, the body's main fuel source. Carbohydrates can keep you energized and satisfied, and are important for fueling exercise. Brown rice, especially, is an excellent source of many nutrients, including fiber, manganese, selenium, magnesium, and B vitamins.",
-        "facility": [
-            {
-                "name": "Fried Rice",
-                "img": "https://ibb.co/99h4bCT",
-                "price": "8.00",
-                "details": "A quick fried rice recipe like you get at your favorite Chinese restaurant. Leftover rice, plus a couple of eggs, baby carrots, peas, and soy sauce is all you need. Garnish with sliced green onions, if desired."
-            },
-            {
-                "name": "Coconut Rice",
-                "img": "https://ibb.co/0mjfnw5",
-                "price": "20.00",
-                "details": "Fluffy coconut rice eluded me for years. And finally, I’ve cracked it. This is super fluffy, none of the gluey coconut milk scum on the surface. Just like you get at restaurants!"
-            },
-            {
-                "name": "Chicken Biryani",
-                "img": "https://ibb.co/SK1HtQh",
-                "price": "20.00",
-                "details": "One of the most royal delicacies that you can enjoy on any occasion or festival, Chicken Biryani is the epitome of a one-pot meal. Well, no one can resist the sight of the aromatic and delicious Chicken Biryani recipe. If you are also craving that, then you need not go anywhere as we have got this super-easy biryani recipe for you. So, what are you waiting for? Do try this delicious Chicken Biryani recipe and enjoy it with your loved ones."
-            },
-            {
-                "name": "Beef Biryani",
-                "img": "https://ibb.co/jDb8gL5",
-                "price": "20.00",
-                "details": "The flavor of a mild white korma amped up with green chilies compounded with the heady aromas of nutmeg, mace, and saunf and wild mixture of masalajaat."
-            }
-        ],
         "review": [
             {
                 "email": "biden@america.com",
@@ -45,28 +19,8 @@
         "service_id": "02",
         "title": "Fast Food",
         "img": "https://i.ibb.co/k5H4x14/sandwich.png",
-        "price": "150.00",
+        "price": "60.00",
         "description": "Fast food menus are tricky when you’re watching your weight or your health. Finding a healthy, well-balanced meal in most fast food restaurants is a challenge. But there are always choices you can make that are healthier than others. The following tips and menu recommendations can help you stay on track.",
-        "facility": [
-            {
-                "name": "Burger",
-                "img": "https://ibb.co/s18MMbK",
-                "price": "150.00",
-                "details": "We know how a burger should taste! We pride ourselves in making fresh, never-frozen beef that is locally sourced and ground fresh daily. It doesn't stop there... Our bread is baked fresh daily, our onion rings are fried fresh to order, and our fries are cooked by the order from freshly sliced potatoes!"
-            },
-            {
-                "name": "Pizza",
-                "img": "https://ibb.co/MVqh9Np",
-                "price": "150.00",
-                "details": "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot."
-            },
-            {
-                "name": "Sandwich",
-                "img": "https://ibb.co/DzV9tp9",
-                "price": "150.00",
-                "details": "Many people enjoy the sandwich as it is easy and quick to make in a hurry. Also, the sandwich can be easily eaten with one hand without utensils which allows consumers to have a hand free to do other things. In many countries, children eat sandwiches for lunch at school. The sandwiches are put in a lunchbox and often wrapped in cling film to keep them fresh."
-            }
-        ],
         "review": [
             {
                 "email": "stark@america.com",
@@ -81,28 +35,8 @@
         "service_id": "03",
         "title": "Meat",
         "img": "https://i.ibb.co/HB0ZCrn/flesh.png",
-        "price": "30.00",
+        "price": "500.00",
         "description": "Meat is a complete, high-quality protein containing all of the essential amino acids your body needs for optimal health. Meat provides more protein per serving (25 grams per 3 ounces) than dairy (8 grams per cup), eggs (6 grams each), legumes (12 grams per ¾ cup), vegetables or nuts (2 to 5 grams per serving). Meat is THE natural source of Vitamin B12. Consuming meat may help you manage, and even lose, weight.",
-        "facility": [
-            {
-                "name": "Lamb Shanks",
-                "img": "https://ibb.co/ZKng80R",
-                "price": "30.00",
-                "details": "Slow cooked lamb shanks are a family favourite dinner ordered at restaurants and pubs all over Australia year round. Simmered in a rich, Bourguignon inspired red wine sauce, the meat just slides off the bone"
-            },
-            {
-                "name": "Roast Beef",
-                "img": "https://ibb.co/9hJzHL8",
-                "price": "30.00",
-                "details": "Roast beef is a dish of beef that is roasted, generally served as the main dish of a meal. In the Anglosphere, roast beef is one of the meats often served at Sunday lunch or dinner. Yorkshire pudding is a standard side dish. Sliced roast beef is also sold as a cold cut, and used as a sandwich filling."
-            },
-            {
-                "name": "Meatloaf",
-                "img": "https://ibb.co/vdG9VKS",
-                "price": "30.00",
-                "details": "Meatloaf is a dish of ground meat that has been combined with other ingredients and formed into the shape of a loaf, then baked or smoked."
-            }
-        ],
         "review": [
             {
                 "email": "jolie@america.com",
@@ -117,26 +51,8 @@
         "service_id": "04",
         "title": "Chicken",
         "img": "https://i.ibb.co/SNx6xHD/chicken.png",
-        "price": "20.00",
+        "price": "180.00",
         "description": "Chicken has tryptophan, an amino acid that is responsible for raising serotonin levels in your brain. Serotonin is the “feel-good” neurochemical linked with mood. Dark and white meat chicken contains vitamin B12 and choline, which together may promote brain development in children, help the nervous system function properly and aid cognitive performance in older adults. For those who struggle with chewing or swallowing foods, or with changes in taste, chicken is a versatile source of high-quality protein. Chicken provides under-consumed vitamins and minerals, and can be center of the plate for a heart-healthy, low-fat, low-cholesterol diet, such as the DASH diet",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ],
         "review": [
             {
                 "email": "hamsworth@america.com",
@@ -151,26 +67,8 @@
         "service_id": "05",
         "title": "Vagetables",
         "img": "https://i.ibb.co/vV0F6tT/vagetable.png",
-        "price": "20.00",
+        "price": "50.00",
         "description": "Vegetables are parts of plants that are consumed by humans or other animals as food. The original meaning is still commonly used and is applied to plants collectively to refer to all edible plant matter, including the flowers, fruits, stems, leaves, roots, and seeds.",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ],
         "review": [
             {
                 "email": "rogers@america.com",
@@ -185,26 +83,8 @@
         "service_id": "06",
         "title": "Fruits",
         "img": "https://i.ibb.co/S3MDKLc/fruits.png",
-        "price": "20.00",
+        "price": "300.00",
         "description": "Fruits are the mature and ripened ovaries of flowers [1]. The first step in fruit growth is fertilization of the carpel. Then, a fruit arises from a series of transformations that occur during the development of the fertilized carpel, resulting in the ovary of the flower maturing and ripening. Throughout this process, the cells in the carpel of the flower change so that the structural layers become the fruit ",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
-        ],
         "review": [
             {
                 "email": "jobs@america.com",
