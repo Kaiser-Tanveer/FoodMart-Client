@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({ food }) => {
     console.log(food);
-    const { img, title, description, price } = food;
+    const { img, title, description, price, _id } = food;
     return (
         <div className="card lg:w-2/3 mx-auto image-full border border-white">
             <figure><img src={img} alt="foods" /></figure>
@@ -16,7 +16,7 @@ const Cards = ({ food }) => {
                 </p>
                 <div className="card-actions justify-between items-center">
                     <h4>Price: ৳{price}</h4>
-                    <button className="btn btn-primary"><Link to="/details">More Details</Link></button>
+                    <button className="btn btn-primary"><Link to={`/services/${food._id}`}>More Details</Link></button>
                 </div>
             </div>
         </div>

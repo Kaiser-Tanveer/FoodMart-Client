@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Cards from './Cards';
 import './FoodCards.css';
 
@@ -16,7 +16,7 @@ const FoodCards = () => {
                     />)
                 }
             </div>
-            <button className='btn btn-primary mt-10'>See All</button>
+            <button className='btn btn-primary mt-10'><Link to="/services">See All</Link></button>
         </div>
     );
 };

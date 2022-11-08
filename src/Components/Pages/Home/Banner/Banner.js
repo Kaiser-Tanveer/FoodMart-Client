@@ -35,8 +35,8 @@ const Banner = () => {
         },
         {
             image: img5,
-            prev: 5,
-            id: 6,
+            prev: 4,
+            id: 5,
             next: 1
         }
     ]
