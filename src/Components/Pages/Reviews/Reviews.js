@@ -2,7 +2,8 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div>
+        <div className='pt-10'>
+            <h1 className='text-5xl font-bold'>Add Your <span className='text-primary'>Review</span> Here..</h1>
             <form>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 my-10'>
                     <input name="fName" type="text" placeholder="First Name" className="input input-bordered input-primary w-full" />

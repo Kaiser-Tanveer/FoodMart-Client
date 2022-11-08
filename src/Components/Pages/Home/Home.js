@@ -5,6 +5,7 @@ import FoodCards from './FoodCards/FoodCards';
 
 const Home = () => {
     const foods = useLoaderData();
+    console.log(foods);
     return (
         <div>
             <div className='bg-primary text-white font-semibold py-5 shadow'>

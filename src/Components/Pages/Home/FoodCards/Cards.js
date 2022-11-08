@@ -11,7 +11,7 @@ const Cards = ({ food }) => {
                 <h2 className="card-title">{title}</h2>
                 <p>
                     {
-                        description.length > 100 ? description.slice(0, 100) : description
+                        description.length > 100 ? description.slice(0, 100) + '...' : description
                     }
                 </p>
                 <div className="card-actions justify-between items-center">

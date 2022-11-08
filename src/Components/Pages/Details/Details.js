@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import MyReview from '../MyReview/MyReview';
 import Reviews from '../Reviews/Reviews';
 
 const Details = () => {
@@ -17,6 +18,7 @@ const Details = () => {
                 </div>
             </div>
             <Reviews />
+            <MyReview />
         </div>
     );
 };
