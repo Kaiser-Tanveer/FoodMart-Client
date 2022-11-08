@@ -11,7 +11,7 @@ const Banner = () => {
     const bannerData = [
         {
             image: img1,
-            prev: 6,
+            prev: 5,
             id: 1,
             next: 2
         },

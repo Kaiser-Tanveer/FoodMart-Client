@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BannerItems.css'
 
 const BannerItems = ({ slide }) => {
@@ -12,18 +13,18 @@ const BannerItems = ({ slide }) => {
                 <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a>
                 <a href={`#slide${next}`} className="btn btn-circle">❯</a>
             </div>
-            <div className="absolute flex transform -translate-y-1/2 left-24 top-1/3">
-                <h1 className='text-white text-6xl font-bold hidden md:block'>Affordable<br />
-                    Price for Car <br />
-                    Service
+            <div className="absolute flex transform -translate-y-1/2 left-24 top-1/3 text-left pb-10">
+                <h1 className='text-white text-6xl font-bold hidden md:block'> HEALTHY &<br />
+                    DELICIOUS<br />
+                    FOODS EVER
                 </h1>
             </div>
-            <div className="absolute w-2/5 flex transform -translate-y-1/2 left-24 top-1/3 lg:top-1/2">
-                <p className='md:hidden lg:block text-xl text-white'>There are many variant of passages of available<span className='hidden lg:inline'>, But majority have suffered alteration in som forms</span></p>
+            <div className="absolute pt-8 text-left w-2/5 flex transform -translate-y-1/2 left-24 top-1/3 lg:top-1/2">
+                <p className='md:hidden lg:block text-xl text-white'>There are many variant of FOODS are available<span className='hidden lg:inline'>, But majority have suffered alteration in some forms</span></p>
             </div>
             <div className="absolute w-2/5 flex transform -translate-y-1/2 left-24 top-3/4">
-                <button className="btn btn-warning mr-5">Warning</button>
-                <button className="btn btn-outline btn-warning">Warning</button>
+                <button className="btn btn-primary mr-5"><Link to="/services">All Services</Link></button>
+                <button className="btn btn-outline btn-primary"><Link to="/services">All Services</Link></button>
             </div>
         </div>
     );
