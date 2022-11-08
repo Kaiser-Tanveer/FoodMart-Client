@@ -30,6 +30,15 @@
                 "price": "20.00",
                 "details": "The flavor of a mild white korma amped up with green chilies compounded with the heady aromas of nutmeg, mace, and saunf and wild mixture of masalajaat."
             }
+        ],
+        "review": [
+            {
+                "email": "biden@america.com",
+                "name": "Joe Biden",
+                "img": "https://ibb.co/DQRWXcH",
+                "ratings": "4",
+                "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown"
+            }
         ]
     },
     {
@@ -56,6 +65,15 @@
                 "img": "https://ibb.co/DzV9tp9",
                 "price": "150.00",
                 "details": "Many people enjoy the sandwich as it is easy and quick to make in a hurry. Also, the sandwich can be easily eaten with one hand without utensils which allows consumers to have a hand free to do other things. In many countries, children eat sandwiches for lunch at school. The sandwiches are put in a lunchbox and often wrapped in cling film to keep them fresh."
+            }
+        ],
+        "review": [
+            {
+                "email": "stark@america.com",
+                "name": "Tony Stark",
+                "img": "https://ibb.co/SmGJBkP",
+                "ratings": "4",
+                "review": "They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait. So this was a big plus. The service was exceptional as well. Would definitely send a friend there."
             }
         ]
     },
@@ -84,6 +102,15 @@
                 "price": "30.00",
                 "details": "Meatloaf is a dish of ground meat that has been combined with other ingredients and formed into the shape of a loaf, then baked or smoked."
             }
+        ],
+        "review": [
+            {
+                "email": "jolie@america.com",
+                "name": "angelina jolie",
+                "img": "https://ibb.co/L0s2zYX",
+                "ratings": "4",
+                "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown"
+            }
         ]
     },
     {
@@ -108,6 +135,15 @@
             {
                 "name": "Quality Cost Service",
                 "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+            }
+        ],
+        "review": [
+            {
+                "email": "hamsworth@america.com",
+                "name": "Chris Hamsworth",
+                "img": "https://ibb.co/QYmbLQN",
+                "ratings": "4",
+                "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown"
             }
         ]
     },
@@ -134,6 +170,15 @@
                 "name": "Quality Cost Service",
                 "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
             }
+        ],
+        "review": [
+            {
+                "email": "rogers@america.com",
+                "name": "Steve Rogers",
+                "img": "https://ibb.co/DQRWXcH",
+                "ratings": "4",
+                "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown"
+            }
         ]
     },
     {
@@ -158,6 +203,15 @@
             {
                 "name": "Quality Cost Service",
                 "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+            }
+        ],
+        "review": [
+            {
+                "email": "jobs@america.com",
+                "name": "Steve Jobs",
+                "img": "https://ibb.co/DQRWXcH",
+                "ratings": "4",
+                "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown"
             }
         ]
     }
