@@ -40,7 +40,7 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user?.uid ?
-                        <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-outline btn-primary">Log Out</button>
+                        <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-sm btn-primary">Log Out</button>
                         :
                         <Link to='/register'><button className="btn btn-outline btn-primary">Register</button></Link>
                 }
