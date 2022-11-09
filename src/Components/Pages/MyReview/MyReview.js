@@ -1,37 +1,21 @@
 import React from 'react';
+import ReviewRow from './ReviewRow';
 
 const MyReview = () => {
     return (
         <div>
-            <div className="">
-                <table className="table w-4/5 mx-auto">
+            <div className="py-10 overflow-auto">
+                <table className="table w-full mx-auto">
 
                     <thead>
                         <tr>
-                            <th>Customer Name</th>
-                            <th>Review</th>
-                            <th>Delete Review</th>
+                            <th className='w-2/5'>Customer Name</th>
+                            <th className='w-2/5'>Review</th>
+                            <th className='w-1/5 ml-0 pl-0'>Delete Review</th>
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr className="hover">
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td><button className="btn btn-error btn-square btn-outline">X</button></td>
-                        </tr>
-
-                        <tr className="hover">
-                            <td>Hart Hagerty</td>
-                            <td>Desktop Support Technician</td>
-                            <td><button className="btn btn-error btn-square btn-outline">X</button></td>
-                        </tr>
-
-                        <tr className="hover">
-                            <td>Brice Swyre</td>
-                            <td>Tax Accountant</td>
-                            <td><button className="btn btn-error btn-square btn-outline">X</button></td>
-                        </tr>
+                        <ReviewRow />
                     </tbody>
                 </table>
             </div>

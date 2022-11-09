@@ -1,8 +1,11 @@
 import { Warning } from 'postcss';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import MyReview from '../MyReview/MyReview';
 
 const Reviews = () => {
+    const { user } = useContext(AuthContext);
     const { _id, title, price } = useLoaderData();
 
     // Review Handler 
@@ -14,7 +17,7 @@ const Reviews = () => {
         const message = form.message.value;
 
         const review = {
-            food: _id,
+            service: _id,
             serviceName: title,
             price,
             customer: name,
@@ -50,7 +53,7 @@ const Reviews = () => {
                         <input name="fName" type="text" placeholder="First Name" className="input input-bordered input-primary w-full" />
                         <input name="lName" type="text" placeholder="Last Name" className="input input-bordered input-primary w-full" />
                     </div>
-                    <input name="email" type="email" placeholder="Your Email" className="input input-bordered input-primary w-full mb-10" />
+                    <input name="email" type="email" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-primary w-full mb-10" readOnly />
                     <textarea name="message" className="textarea textarea-primary w-full mb-8" placeholder="Your Message" />
                     <input type="submit" className='btn btn-primary text-white mb-10 flex mx-auto' value="Submit" />
                 </form>

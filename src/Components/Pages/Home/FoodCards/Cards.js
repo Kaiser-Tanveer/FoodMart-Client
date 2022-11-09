@@ -19,6 +19,7 @@ const Cards = ({ food }) => {
                     <Link to={`/services/${food._id}`}><button className="btn btn-primary">More Details</button></Link>
                 </div>
             </div>
+
         </div>
     );
 };

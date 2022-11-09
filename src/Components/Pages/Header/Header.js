@@ -15,7 +15,7 @@ const Header = () => {
                 user?.uid &&
                 <>
                     <li className='font-semibold'><Link to='/myReview'>My Review</Link></li>
-                    <li className='font-semibold'><Link to='/services'>Add Service</Link></li>
+                    <li className='font-semibold'><Link to='/xyz'>Add Service</Link></li>
                 </>
             }
         </>

@@ -1,6 +1,9 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
+import 'react-photo-view/dist/react-photo-view.css';
+
 
 const Details = () => {
     const { description, title, img, price } = useLoaderData();
@@ -8,7 +11,11 @@ const Details = () => {
         <div className='w-4/5 mx-auto'>
             <div className="hero min-h-screen bg-base-200 rounded-md">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={img} className="max-w-sm rounded-lg shadow-2xl w-full" alt='' />
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} className="max-w-sm rounded-lg shadow-2xl w-full" alt='' />
+                        </PhotoView>
+                    </PhotoProvider>
                     <div>
                         <h1 className="text-5xl font-bold">{title}</h1>
                         <h1 className="text-2xl font-bold py-6">Price: ৳<span className='text-primary'>{price}</span></h1>
