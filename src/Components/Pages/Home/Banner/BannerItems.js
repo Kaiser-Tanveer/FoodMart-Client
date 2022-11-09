@@ -23,7 +23,7 @@ const BannerItems = ({ slide }) => {
                 <p className='md:hidden lg:block text-xl text-white'>There are many variant of FOODS are available<span className='hidden lg:inline'>, But majority have suffered alteration in some forms</span></p>
             </div>
             <div className="absolute w-2/5 flex transform -translate-y-1/2 left-24 top-3/4">
-                <button className="btn btn-outline btn-warning"><Link to="/services">All Services</Link></button>
+                <Link to="/services"><button className="btn btn-outline btn-warning">All Services</button></Link>
             </div>
         </div>
     );

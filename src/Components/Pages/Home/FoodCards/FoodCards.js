@@ -16,7 +16,7 @@ const FoodCards = () => {
                     />)
                 }
             </div>
-            <button className='btn btn-primary mt-10'><Link to="/services">See All</Link></button>
+            <Link to="/services"><button className='btn btn-primary mt-10'>See All</button></Link>
         </div>
     );
 };

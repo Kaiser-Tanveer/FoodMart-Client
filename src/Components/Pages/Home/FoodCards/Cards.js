@@ -16,7 +16,7 @@ const Cards = ({ food }) => {
                 </p>
                 <div className="card-actions justify-between items-center">
                     <h4>Price: ৳{price}</h4>
-                    <button className="btn btn-primary"><Link to={`/services/${food._id}`}>More Details</Link></button>
+                    <Link to={`/services/${food._id}`}><button className="btn btn-primary">More Details</button></Link>
                 </div>
             </div>
         </div>
