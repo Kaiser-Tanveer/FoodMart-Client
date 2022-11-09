@@ -4,6 +4,7 @@ import Blog from "../Pages/Blog/Blog";
 import Details from "../Pages/Details/Details";
 import FoodCards from "../Pages/Home/FoodCards/FoodCards";
 import Home from "../Pages/Home/Home";
+import NotFound from "../Pages/NotFound/NotFound";
 import WhatOffers from "../Pages/WhatOffers/WhatOffers";
 import Main from "./Layout/Main";
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: '/offer',
                 element: <WhatOffers />
+            },
+            {
+                path: '*',
+                element: <NotFound />
             },
         ]
     }

@@ -39,10 +39,10 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
+            <div className="hero min-h-screen bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={jwt} className="max-w-sm rounded-lg shadow-2xl" alt='jwt' />
+                        <img src={jwt} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='jwt' />
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">What's JWT? How does it works?</h1>
@@ -80,10 +80,10 @@ const Blog = () => {
             </div>
 
 
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
+            <div className="hero min-h-screen bg-base-200 border border-2-bottom pb-10">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={nodeJsReq} className="max-w-sm rounded-lg shadow-2xl" alt='nodeJsReq' />
+                        <img src={nodeJsReq} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='nodeJsReq' />
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">How does NodeJs Handle multiple requests at the same time?</h1>

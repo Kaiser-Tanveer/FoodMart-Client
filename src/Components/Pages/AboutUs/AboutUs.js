@@ -5,7 +5,7 @@ import gates from '../../../Assets/about/bilGates.png';
 
 const AboutUs = () => {
     return (
-        <div className='lg:w-4/5 mx-auto py-20'>
+        <div className='w-4/5 mx-auto py-20'>
             <h1 className='text-5xl font-bold py-10'>About Us</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 <div className="card bg-base-100 shadow-xl">

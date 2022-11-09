@@ -5,8 +5,8 @@ const WhatOffers = () => {
     return (
         <div className=''>
             <div className="hero min-h-screen bg-base-200 pt-20">
-                <div className="hero-content lg:w-4/5 mx-auto flex-col lg:flex-row-reverse">
-                    <img src={farmbg} className="max-w-sm h-full rounded-lg shadow-2xl" alt='' />
+                <div className="hero-content w-4/5 mx-auto flex-col lg:flex-row-reverse">
+                    <img src={farmbg} className="max-w-sm w-full h-full rounded-lg shadow-2xl" alt='' />
                     <div>
                         <h1 className="text-5xl font-bold">What we Offer!!!</h1>
                         <p className="py-6">How your food is grown or raised can have a major impact on your mental and emotional health as well as the environment. Organic foods often have more beneficial nutrients, such as antioxidants, than their conventionally-grown counterparts and people with allergies to foods, chemicals, or preservatives may find their symptoms lessen or go away when they eat only organic foods.
