@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import './FormBG.css';
 import { FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const LogIn = () => {
     const { signIn } = useContext(AuthContext);
+    // To redirect 
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state?.from?.pathname || '/';
 
     // Form submit handler 
     const submitHandler = e => {
@@ -20,10 +24,8 @@ const LogIn = () => {
                 console.log(user);
                 alert('Logged in Successfully!!!')
                 form.reset();
+                navigate(from, { replace: true });
 
-                // // Get JWT token 
-                // setAuthToken();
-                // navigate(from, { replace: true });
             })
             .catch(err => console.log(err));
     }
