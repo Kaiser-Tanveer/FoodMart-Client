@@ -3,9 +3,11 @@ import './FormBG.css';
 import { FaUser } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 const LogIn = () => {
     const { signIn } = useContext(AuthContext);
+    useTitle('Login');
     // To redirect 
     const location = useLocation();
     const navigate = useNavigate();

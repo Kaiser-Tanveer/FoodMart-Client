@@ -3,10 +3,12 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
 import 'react-photo-view/dist/react-photo-view.css';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 
 const Details = () => {
     const { description, title, img, price } = useLoaderData();
+    useTitle('Service Details');
     return (
         <div className='w-4/5 mx-auto'>
             <div className="hero min-h-screen bg-base-200 rounded-md">

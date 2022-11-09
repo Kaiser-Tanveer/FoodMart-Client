@@ -1,8 +1,10 @@
 import React from 'react';
 import './NotFound.css';
 import { Link } from 'react-router-dom';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 const NotFound = () => {
+    useTitle('Not Found')
     return (
         <div className='restricted text-white pb-52 pt-12'>
             <h1 className='text-6xl font-bold text-primary'>Oops!!!</h1>

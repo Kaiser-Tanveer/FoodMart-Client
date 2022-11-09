@@ -1,7 +1,9 @@
 import React from 'react';
 import farmbg from '../../../Assets/images/firmBG.png';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 const WhatOffers = () => {
+    useTitle('We Offers');
     return (
         <div className=''>
             <div className="hero min-h-screen bg-base-200 pt-20">
@@ -9,7 +11,7 @@ const WhatOffers = () => {
                     <img src={farmbg} className="max-w-sm w-full h-full rounded-lg shadow-2xl" alt='' />
                     <div>
                         <h1 className="text-5xl font-bold">What we Offer!!!</h1>
-                        <p className="py-6">How your food is grown or raised can have a major impact on your mental and emotional health as well as the environment. Organic foods often have more beneficial nutrients, such as antioxidants, than their conventionally-grown counterparts and people with allergies to foods, chemicals, or preservatives may find their symptoms lessen or go away when they eat only organic foods.
+                        <p className="text-left py-6">How your food is grown or raised can have a major impact on your mental and emotional health as well as the environment. Organic foods often have more beneficial nutrients, such as antioxidants, than their conventionally-grown counterparts and people with allergies to foods, chemicals, or preservatives may find their symptoms lessen or go away when they eat only organic foods.
 
                             Organic produce contains fewer pesticides. Chemicals such as synthetic fungicides, herbicides, and insecticides are widely used in conventional agriculture and residues remain on (and in) the food we eat.
 

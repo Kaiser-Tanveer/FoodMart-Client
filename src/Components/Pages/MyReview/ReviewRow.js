@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import ChildRow from './ChildRow';
 
 const ReviewRow = () => {
     const { user } = useContext(AuthContext);
@@ -10,17 +11,33 @@ const ReviewRow = () => {
             .then(res => res.json())
             .then(data => setReview(data));
     }, [user?.email]);
-    console.log(review);
+    // console.log(review);
+
+    const deleteHandler = id => {
+        const proceed = window.confirm('Sure to delete this review!!!')
+        if (proceed) {
+            fetch(`http://localhost:5000/review/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.acknowledged) {
+                        alert('deleted seccessfully!')
+                        const remaining = review.filter(view => view._id !== id);
+                        setReview(remaining);
+                    }
+                    console.log(data);
+                })
+        }
+    }
     return (
         <>
             {
-                review.map(view => <tr
+                review.map(view => <ChildRow
                     key={view._id}
-                    className="hover">
-                    <td>{view.customer}</td>
-                    <td>{view.message}</td>
-                    <td><button className="btn btn-error btn-square btn-outline">X</button></td>
-                </tr>)
+                    view={view}
+                    deleteHandler={deleteHandler}
+                />)
             }
         </>
     );

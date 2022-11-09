@@ -1,12 +1,13 @@
-import { Warning } from 'postcss';
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 import MyReview from '../MyReview/MyReview';
 
 const Reviews = () => {
     const { user } = useContext(AuthContext);
     const { _id, title, price } = useLoaderData();
+    useTitle('Reviews')
 
     // Review Handler 
     const reviewHandler = e => {
@@ -15,6 +16,7 @@ const Reviews = () => {
         const name = `${form.fName.value} ${form.lName.value}`;
         const email = form.email.value;
         const message = form.message.value;
+        form.reset();
 
         const review = {
             service: _id,
@@ -26,7 +28,6 @@ const Reviews = () => {
         }
         console.log(review);
 
-        // Warning...
         // Creating review data for MongoDB 
         fetch('http://localhost:5000/review', {
             method: 'POST',

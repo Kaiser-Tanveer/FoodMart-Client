@@ -2,8 +2,10 @@ import React from 'react';
 import jhnkrPP from '../../../Assets/about/Jhnkrpp.png';
 import mypp from '../../../Assets/about/mypp.png';
 import gates from '../../../Assets/about/bilGates.png';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 const AboutUs = () => {
+    useTitle('About');
     return (
         <div className='w-4/5 mx-auto py-20'>
             <h1 className='text-5xl font-bold py-10'>About Us</h1>

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import { FaUser } from 'react-icons/fa';
+
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -10,14 +12,14 @@ const Header = () => {
         <>
             <li className='font-semibold'><Link to='/'>Home</Link></li>
             <li className='font-semibold'><Link to='/services'>Services</Link></li>
-            <li className='font-semibold'><Link to='/blog'>blog</Link></li>
             {
                 user?.uid &&
                 <>
                     <li className='font-semibold'><Link to='/myReview'>My Review</Link></li>
-                    <li className='font-semibold'><Link to='/xyz'>Add Service</Link></li>
+                    <li className='font-semibold'><Link to='/addService'>Add Service</Link></li>
                 </>
             }
+            <li className='font-semibold'><Link to='/blog'>blog</Link></li>
         </>
     return (
         <div className="navbar h-20 mb-12 pt-12 bg-base-100 shadow items-center pb-10">
@@ -40,7 +42,9 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user?.uid ?
-                        <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-sm btn-primary">Log Out</button>
+                        <>
+                            <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-sm btn-primary">Log Out</button>
+                        </>
                         :
                         <Link to='/register'><button className="btn btn-outline btn-primary">Register</button></Link>
                 }

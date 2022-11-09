@@ -5,8 +5,10 @@ import jwt from '../../../Assets/images/jwt.png';
 import js from '../../../Assets/images/js.png';
 import nodeJs from '../../../Assets/images/nodeJs.png';
 import nodeJsReq from '../../../Assets/images/nodejsReq.png';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 const Blog = () => {
+    useTitle('Blog');
     return (
         <>
             <h1 className='text-5xl font-bold pb-10 bg-light'><span className='text-primary'>Blog</span> Section</h1>

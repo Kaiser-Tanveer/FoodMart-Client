@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import './FormBG.css';
 import { FaUser, FaGoogle } from 'react-icons/fa';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../DynamicTitle/DynamicTitle';
 
 
 const Register = () => {
     const { createUser, googleLogIn } = useContext(AuthContext);
+    useTitle('Register');
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -68,7 +70,13 @@ const Register = () => {
                                     </label>
                                     <p className='text-left'>Already have an account? <Link to='/logIn' className='link-hover text-primary'>Sign In</Link></p>
                                 </div>
-                                <div>
+                                <div className="form-control mt-6">
+                                    <button className="btn btn-primary">Register</button>
+                                </div>
+                                <div className='pt-10 grid grid-cols-3 items-center mx-auto'>
+                                    <div>
+                                        <hr className='w-full border border-primary' />
+                                    </div>
                                     <button onClick={
                                         () => googleLogIn()
                                             .then(result => {
@@ -77,10 +85,10 @@ const Register = () => {
                                                 navigate(from, { replace: true });
                                             })
                                             .then(err => console.error(err))
-                                    } className='btn btn-primary btn-outline'><FaGoogle /></button>
-                                </div>
-                                <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Register</button>
+                                    } className='btn btn-primary btn-outline shadow-2xl'><FaGoogle /></button>
+                                    <div>
+                                        <hr className='w-full border border-primary' />
+                                    </div>
                                 </div>
                             </div>
                         </div>
