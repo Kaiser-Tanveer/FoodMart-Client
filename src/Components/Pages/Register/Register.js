@@ -1,12 +1,16 @@
 import React, { useContext } from 'react';
 import './FormBG.css';
-import { FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaUser, FaGoogle } from 'react-icons/fa';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, googleLogIn } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
     const submitHandler = e => {
         e.preventDefault();
@@ -19,6 +23,8 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
+                user.displayName = name;
                 form.reset();
             })
             .catch(err => console.error(err))
@@ -61,6 +67,17 @@ const Register = () => {
                                     <label className="label">
                                     </label>
                                     <p className='text-left'>Already have an account? <Link to='/logIn' className='link-hover text-primary'>Sign In</Link></p>
+                                </div>
+                                <div>
+                                    <button onClick={
+                                        () => googleLogIn()
+                                            .then(result => {
+                                                const user = result.user;
+                                                console.log(user);
+                                                navigate(from, { replace: true });
+                                            })
+                                            .then(err => console.error(err))
+                                    } className='btn btn-primary btn-outline'><FaGoogle /></button>
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Register</button>
