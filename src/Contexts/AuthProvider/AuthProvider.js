@@ -1,12 +1,14 @@
 import React, { createContext } from 'react';
 
 // Creating AuthContext 
-const AuthContext = createContext();
-const AuthProvider = () => {
+export const AuthContext = createContext();
+const AuthProvider = ({ children }) => {
+    const user = { name: 'kaiser', age: 22 }
+    const authValue = { user }
     return (
-        <div>
-
-        </div>
+        <AuthContext.Provider value={authValue}>
+            {children}
+        </AuthContext.Provider>
     );
 };
 
