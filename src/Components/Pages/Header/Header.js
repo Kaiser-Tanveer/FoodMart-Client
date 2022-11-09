@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
 
     // Creating Menu items 
     const menuItem =
@@ -9,6 +11,13 @@ const Header = () => {
             <li className='font-semibold'><Link to='/'>Home</Link></li>
             <li className='font-semibold'><Link to='/services'>Services</Link></li>
             <li className='font-semibold'><Link to='/blog'>blog</Link></li>
+            {
+                user?.uid &&
+                <>
+                    <li className='font-semibold'><Link to='/myReview'>My Review</Link></li>
+                    <li className='font-semibold'><Link to='/services'>Add Service</Link></li>
+                </>
+            }
         </>
     return (
         <div className="navbar h-20 mb-12 pt-12 bg-base-100 shadow items-center pb-10">
@@ -29,7 +38,12 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/register'><button className="btn btn-outline btn-primary">Register</button></Link>
+                {
+                    user?.uid ?
+                        <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-outline btn-primary">Log Out</button>
+                        :
+                        <Link to='/register'><button className="btn btn-outline btn-primary">Register</button></Link>
+                }
             </div>
         </div>
     );

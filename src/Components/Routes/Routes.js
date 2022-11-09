@@ -4,6 +4,7 @@ import Blog from "../Pages/Blog/Blog";
 import Details from "../Pages/Details/Details";
 import FoodCards from "../Pages/Home/FoodCards/FoodCards";
 import Home from "../Pages/Home/Home";
+import MyReview from "../Pages/MyReview/MyReview";
 import NotFound from "../Pages/NotFound/NotFound";
 import LogIn from "../Pages/Register/LogIn";
 import Register from "../Pages/Register/Register";
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: '/logIn',
                 element: <LogIn />
+            },
+            {
+                path: '/myReview',
+                element: <MyReview />
             },
             {
                 path: '/review/:id',
