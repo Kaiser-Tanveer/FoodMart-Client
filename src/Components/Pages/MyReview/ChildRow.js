@@ -1,15 +1,16 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 const ChildRow = ({ view, deleteHandler }) => {
-    const { setLoading } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const { _id, customer, serviceName, message } = view;
 
 
     return (
         <>
             {
-                !_id ? <h1>No Review Added Yet!</h1>
+                !_id ? <h1 className='text-xl text-primary'>No Review Added Yet!</h1>
                     :
                     <tr
                         className="hover">

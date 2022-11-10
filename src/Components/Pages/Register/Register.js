@@ -6,7 +6,6 @@ import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
 import { toast, Toaster } from 'react-hot-toast';
 
-
 const Register = () => {
     const { createUser, googleLogIn } = useContext(AuthContext);
     useTitle('Register');

@@ -25,7 +25,7 @@ const AddService = () => {
 
 
         // Posting data to backEnd
-        fetch('http://localhost:5000/services', {
+        fetch('https://food-mart-server.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

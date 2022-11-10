@@ -28,10 +28,14 @@ const Reviews = () => {
             email,
             message
         }
+
+        const disable = () => {
+
+        }
         console.log(review);
 
         // Creating review data for MongoDB 
-        fetch('http://localhost:5000/review', {
+        fetch('https://food-mart-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -59,7 +63,14 @@ const Reviews = () => {
                         <input name="email" type="email" placeholder="Your Email" defaultValue={user?.email} className="input input-bordered input-primary w-full" readOnly />
                     </div>
                     <textarea name="message" className="textarea textarea-primary w-full mb-8" placeholder="Your Message" required />
-                    <input type="submit" className='btn btn-primary text-white mb-10 flex mx-auto' value="Submit" />
+                    <input type="submit" name='submit' className={
+                        !user?.email ? 'btn mb-10 flex mx-auto btn-disabled'
+                            :
+                            'btn btn-primary text-white mb-10 flex mx-auto'
+                    } value="Submit" />
+                    {
+                        !user?.email && <p className='text-xl text-primary'>Please Login to Add Review</p>
+                    }
                 </form>
             </div>
             <MyReview />

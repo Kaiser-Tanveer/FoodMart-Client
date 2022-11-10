@@ -7,7 +7,7 @@ const ReviewRow = () => {
     const [review, setReview] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user.email}`)
+        fetch(`https://food-mart-server.vercel.app/review?email=${user?.email}`,)
             .then(res => res.json())
             .then(data => setReview(data));
     }, [user?.email]);
@@ -16,7 +16,7 @@ const ReviewRow = () => {
     const deleteHandler = id => {
         const proceed = window.confirm('Sure to delete this review!!!')
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://food-mart-server.vercel.app/review/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

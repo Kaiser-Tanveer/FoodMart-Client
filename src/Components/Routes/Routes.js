@@ -22,17 +22,17 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: () => fetch('http://localhost:5000/home')
+                loader: () => fetch('https://food-mart-server.vercel.app/home')
             },
             {
                 path: '/services',
                 element: <FoodCards />,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://food-mart-server.vercel.app/services')
             },
             {
                 path: '/services/:id',
-                element: <PrivateRoute><Details /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                element: <Details />,
+                loader: ({ params }) => fetch(`https://food-mart-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/blog',
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
             {
                 path: '/review/:id',
                 element: <PrivateRoute><Reviews /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-mart-server.vercel.app/review/${params.id}`)
             },
             {
                 path: '*',
