@@ -4,6 +4,7 @@ import { FaUser, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
+import { toast, Toaster } from 'react-hot-toast';
 
 
 const Register = () => {
@@ -82,6 +83,7 @@ const Register = () => {
                                             .then(result => {
                                                 const user = result.user;
                                                 console.log(user);
+                                                toast.success('Logged in Successfully!')
                                                 navigate(from, { replace: true });
                                             })
                                             .then(err => console.error(err))
@@ -95,6 +97,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };

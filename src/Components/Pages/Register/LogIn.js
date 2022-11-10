@@ -1,13 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './FormBG.css';
 import { FaUser } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
+import { toast, Toaster } from 'react-hot-toast';
+
 
 const LogIn = () => {
     const { signIn } = useContext(AuthContext);
     useTitle('Login');
+
+    const [error, setError] = useState();
     // To redirect 
     const location = useLocation();
     const navigate = useNavigate();
@@ -24,12 +28,35 @@ const LogIn = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                alert('Logged in Successfully!!!')
+
+                const currentUser = {
+                    email: user.email
+                }
+
+                // create jst on DB 
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        // set token on local storege 
+                        localStorage.setItem('foodMart-token', data.token)
+                    })
+
+                toast.success('Logged in Successfully!');
                 form.reset();
                 navigate(from, { replace: true });
 
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                setError(err.message);
+                console.log(err)
+            });
     }
     return (
         <div className='formBG'>
@@ -54,6 +81,7 @@ const LogIn = () => {
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type="password" name='password' placeholder="Password" className="input input-bordered" />
+                                    <p className='text-error pb-4'>{error}</p>
                                     <label className="label">
                                         <p className='text-left'>New in this website? Please, <Link to='/register' className='link-hover text-primary'>Register</Link></p>
                                     </label>
@@ -64,6 +92,7 @@ const LogIn = () => {
                             </div>
                         </div>
                     </form>
+                    <Toaster />
                 </div>
             </div>
         </div>

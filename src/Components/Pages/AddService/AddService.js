@@ -1,5 +1,6 @@
 import React from 'react';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddService = () => {
     useTitle('Add service')
@@ -33,6 +34,10 @@ const AddService = () => {
         })
             .then(res => res.json())
             .then(data => {
+                if (data.acknowledged) {
+                    toast.success('Your Service has Added Successfully!!!')
+                    form.reset();
+                }
                 return console.log(data);
             })
             .catch(err => console.error(err));
@@ -50,6 +55,7 @@ const AddService = () => {
                 <textarea name="description" className="textarea textarea-primary w-full mb-8" placeholder="Service Description" />
                 <input type="submit" className='btn btn-primary text-white mb-10 flex mx-auto' value="Submit" />
             </form>
+            < Toaster />
         </div>
     );
 };
