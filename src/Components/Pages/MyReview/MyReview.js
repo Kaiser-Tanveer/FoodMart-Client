@@ -7,7 +7,7 @@ const MyReview = () => {
     return (
         <div>
             <div className="py-10 overflow-auto">
-                <table className="table w-4/5 mx-auto">
+                <table className="table w-full mx-auto">
 
                     <thead>
                         <tr>

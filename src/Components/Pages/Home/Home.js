@@ -1,4 +1,3 @@
-import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
 import AboutUs from '../AboutUs/AboutUs';
 import WhatOffers from '../WhatOffers/WhatOffers';
@@ -10,16 +9,12 @@ const Home = () => {
     useTitle('Home');
     return (
         <div>
-            <div className='bg-primary text-white font-semibold py-5 shadow'>
                 <FoodMenu />
-            </div>
-            <>
                 <Banner />
                 <FoodCards />
                 <WhatOffers />
                 <AboutUs />
-            </>
-        </div >
+        </div>
     );
 };
 

@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Cards = ({ food }) => {
-    console.log(food);
-    const { img, title, description, price, _id } = food;
+    const { img, title, description, price } = food;
     return (
-        <div className="card w-4/5 mx-auto image-full border border-white">
+        <div className="card w-full h-full mx-auto image-full border border-white shadow-xl shadow-gray-700">
             <figure><img src={img} alt="foods" /></figure>
             <div className="card-body">
-                <h2 className="card-title">{title}</h2>
+                <h2 className="text-xl font-bold text-center">{title}</h2>
                 <p>
                     {
                         description.length > 100 ? description.slice(0, 100) + '...' : description

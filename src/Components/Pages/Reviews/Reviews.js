@@ -49,11 +49,9 @@ const Reviews = () => {
             .catch(err => console.error(err));
     };
 
-
-
     return (
         <>
-            <div className='pt-10 w-4/5 mx-auto'>
+            <div className='pt-10 w-full p-12 mx-auto mt-8 shadow-xl rounded-lg border border-primary border-opacity-10'>
                 <h1 className='text-5xl font-bold'>Add Your <span className='text-primary'>Review</span> Here..</h1>
                 <form onSubmit={reviewHandler}>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 my-10'>

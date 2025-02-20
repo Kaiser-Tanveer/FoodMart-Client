@@ -10,17 +10,17 @@ const FoodMenu = () => {
             .then(data => setFoods(data))
     }, [])
     return (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex overflow-x-auto whitespace-nowrap space-x-4 px-2 py-8 bg-primary text-white">
             {foods.map((food) => (
-                <Link key={food?.service_id}
+                <Link 
+                    key={food?.service_id}
                     to={`/services/${food._id}`}
-                    className='px-4 py-2 border rounded hover:bg-blue-600 inline-flex'
+                    className="px-4 py-2 border rounded hover:bg-blue-600 flex-shrink-0"
                 >
                     {food.title}
                 </Link>
             ))}
         </div>
-
     );
 };
 

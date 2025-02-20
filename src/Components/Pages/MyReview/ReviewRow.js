@@ -11,7 +11,6 @@ const ReviewRow = () => {
             .then(res => res.json())
             .then(data => setReview(data));
     }, [user?.email]);
-    // console.log(review);
 
     const deleteHandler = id => {
         const proceed = window.confirm('Sure to delete this review!!!')
