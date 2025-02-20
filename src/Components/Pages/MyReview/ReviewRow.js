@@ -20,7 +20,7 @@ const ReviewRow = ({review, setReview}) => {
         }
     }
     return (
-        <div>
+        <>
             {
                 review.map(view => <ChildRow
                     key={view._id}
@@ -28,7 +28,7 @@ const ReviewRow = ({review, setReview}) => {
                     deleteHandler={deleteHandler}
                 />)
             }
-        </div>
+        </>
     );
 };
 

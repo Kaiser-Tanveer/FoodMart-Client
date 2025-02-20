@@ -15,7 +15,7 @@ const MyReview = () => {
     }, [user?.email]);
     return (
         <div>
-            <div className="py-10 overflow-auto">
+            <div className="pb-10 overflow-auto">
                 <table className="table w-full mx-auto">
 
                     <thead>
@@ -26,7 +26,7 @@ const MyReview = () => {
                             <th className='w-1/7 ml-0 pl-0'>Delete Review</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='w-full'>
                         <ReviewRow review={review} />
                     </tbody>
                 </table>

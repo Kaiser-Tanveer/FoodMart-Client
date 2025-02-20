@@ -1,9 +1,6 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
-import React, { useContext } from 'react';
-import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import React from 'react';
 
 const ChildRow = ({ view, deleteHandler }) => {
-    const { user } = useContext(AuthContext);
     const { _id, customer, serviceName, message } = view;
 
 
@@ -17,7 +14,7 @@ const ChildRow = ({ view, deleteHandler }) => {
                         <td>{customer}</td>
                         <td>{serviceName}</td>
                         <td>{message}</td>
-                        <td><button onClick={() => deleteHandler(view._id)} className="btn btn-error btn-square btn-outline">X</button>
+                        <td><button onClick={() => deleteHandler(view._id)} className="btn-sm btn-error btn-square rounded-md border border-error btn-outline">X</button>
                             <p>{view.length}</p></td>
                     </tr>
             }
