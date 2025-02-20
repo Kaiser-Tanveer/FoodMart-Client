@@ -1,13 +1,20 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
 import MyReview from '../MyReview/MyReview';
 
 const Reviews = () => {
-    const { user } = useContext(AuthContext);
     const { _id, title, price } = useLoaderData();
     useTitle('Reviews')
+    const { user } = useContext(AuthContext);
+    const [review, setReview] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://food-mart-server.vercel.app/review?email=${user?.email}`,)
+            .then(res => res.json())
+            .then(data => setReview(data));
+    }, [user?.email]);
 
     // Review Handler 
     const reviewHandler = e => {
@@ -71,7 +78,9 @@ const Reviews = () => {
                     }
                 </form>
             </div>
-            <MyReview />
+            <MyReview 
+                review={review}
+            />
         </>
     );
 };

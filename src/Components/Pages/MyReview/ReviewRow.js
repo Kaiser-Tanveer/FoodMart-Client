@@ -1,17 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import React from 'react';
 import ChildRow from './ChildRow';
 
-const ReviewRow = () => {
-    const { user } = useContext(AuthContext);
-    const [review, setReview] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://food-mart-server.vercel.app/review?email=${user?.email}`,)
-            .then(res => res.json())
-            .then(data => setReview(data));
-    }, [user?.email]);
-
+const ReviewRow = ({review, setReview}) => {
     const deleteHandler = id => {
         const proceed = window.confirm('Sure to delete this review!!!')
         if (proceed) {
@@ -21,7 +11,7 @@ const ReviewRow = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.acknowledged) {
-                        alert('deleted seccessfully!')
+                        alert('deleted successfully!')
                         const remaining = review.filter(view => view._id !== id);
                         setReview(remaining);
                     }
@@ -30,7 +20,7 @@ const ReviewRow = () => {
         }
     }
     return (
-        <>
+        <div>
             {
                 review.map(view => <ChildRow
                     key={view._id}
@@ -38,7 +28,7 @@ const ReviewRow = () => {
                     deleteHandler={deleteHandler}
                 />)
             }
-        </>
+        </div>
     );
 };
 
