@@ -12,7 +12,7 @@ const Cards = ({ food }) => {
     };
 
     return (
-        <div className="card w-full h-full mx-auto image-full border border-gray-300 shadow-xl shadow-gray-700">
+        <div className="card w-full h-72 mx-auto image-full border border-gray-300 shadow-xl shadow-gray-700">
             <figure><img src={img} alt="foods" /></figure>
             <div className="card-body">
                 <h2 className="text-xl font-bold text-center">{title}</h2>
