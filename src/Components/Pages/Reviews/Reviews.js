@@ -65,7 +65,6 @@ const Reviews = () => {
         <>
             {review.length > 0 ? (
                 <div className='my-10'>
-                <h3 className='text-2xl font-bold'>My Review</h3>
                 <MyReview review={review} />
                 </div>
             ) : (

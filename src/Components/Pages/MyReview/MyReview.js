@@ -6,18 +6,19 @@ import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 const MyReview = () => {
     useTitle('My review');
     const { user } = useContext(AuthContext);
-    const [review, setReview] = useState([]);
+    const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`https://food-mart-server.vercel.app/review?email=${user?.email}`,)
+        // fetch(`https://food-mart-server.vercel.app/review?email=${user?.email}`,)
+        fetch(`https://food-mart-server.vercel.app/review?`,)
             .then(res => res.json())
-            .then(data => setReview(data));
+            .then(data => setReviews(data));
     }, [user?.email]);
     return (
         <div>
             <div className="pb-10 overflow-auto">
+            <h1 className="text-3xl font-bold mt-10 mb-4">All Reviews</h1>
                 <table className="table w-full mx-auto">
-
                     <thead>
                         <tr>
                             <th className='w-2/7'>Customer Name</th>
@@ -27,7 +28,7 @@ const MyReview = () => {
                         </tr>
                     </thead>
                     <tbody className='w-full'>
-                        <ReviewRow review={review} />
+                        <ReviewRow reviews={reviews} />
                     </tbody>
                 </table>
             </div>
