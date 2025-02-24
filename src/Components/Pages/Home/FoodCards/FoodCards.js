@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../../../DynamicTitle/DynamicTitle';
 import { useState } from 'react';
 import Cards from './Cards';
@@ -10,7 +10,6 @@ const FoodCards = () => {
 
     const [showAll, setShowAll] = useState(false);
 
-    // Show only 4 items initially
     const visibleFoods = showAll ? foods : foods.slice(0, 4);
 
     return (
