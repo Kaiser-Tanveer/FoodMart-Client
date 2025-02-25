@@ -103,7 +103,6 @@ const Register = () => {
                                         () => googleLogIn()
                                             .then(result => {
                                                 const user = result.user;
-                                                console.log(user);
                                                 toast.success('Logged in Successfully!')
                                                 navigate(from, { replace: true });
                                             })
