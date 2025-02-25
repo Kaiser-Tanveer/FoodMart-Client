@@ -10,17 +10,17 @@ import useTitle from '../../../DynamicTitle/DynamicTitle';
 const Blog = () => {
     useTitle('Blog');
     return (
-        <>
+        <article className='w-5/6 mx-auto mb-12 rounded-b-lg'>
             <h1 className='text-5xl font-bold pt-12 pb-4 bg-light'><span className='text-primary'>Blog</span> Section</h1>
             <div className="bg-base-200 border border-2-bottom py-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={sql} className="max-w-sm rounded-lg shadow-2xl" alt='sql' />
-                        <img src={noSql} className="max-w-sm rounded-lg shadow-2xl" alt='noSql' />
+                        <img src={sql} className="max-w-sm rounded-t-lg" alt='sql' />
+                        <img src={noSql} className="max-w-sm rounded-b-lg" alt='noSql' />
                     </div>
-                    <div>
+                    <div className='border-l border-primary pl-4'>
                         <h1 className="text-5xl font-bold">Difference Between SQL and NoSQL</h1>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>SQL:</strong>
                             SQL is the easiest language used to communicate with the RDBMS,
                             Analyzing behavioral related and customized sessions,
@@ -28,7 +28,7 @@ const Blog = () => {
                             It allows you to store and gets data from the database quickly,
                             Preferred when you want to use joins and execute complex queries.
                         </p>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>NoSQL:</strong>
                             When ACID support is not needed,
                             When Traditional RDBMS model is not enough,
@@ -46,13 +46,13 @@ const Blog = () => {
                     <div>
                         <img src={jwt} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='jwt' />
                     </div>
-                    <div>
+                    <div className='border-l border-primary pl-4'>
                         <h1 className="text-5xl font-bold">What's JWT? How does it works?</h1>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>JWT:</strong>
                             JWT or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.
                         </p>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>Way it works:</strong>
                             JWT differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.
                         </p>
@@ -60,20 +60,19 @@ const Blog = () => {
                 </div>
             </div>
 
-
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-6">
+            <div className="py-6 hero min-h-screen bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={js} className="max-w-sm rounded-lg shadow-2xl" alt='js' />
                         <img src={nodeJs} className="max-w-sm rounded-lg shadow-2xl" alt='nodeJs' />
                     </div>
-                    <div>
+                    <div className='border-l border-primary pl-4'>
                         <h1 className="text-5xl font-bold">Difference between JavaScript and NodeJs</h1>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>JavaScript:</strong>
                             Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype inheritance.
                         </p>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>NodeJs:</strong>
                             NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.
                         </p>
@@ -81,15 +80,14 @@ const Blog = () => {
                 </div>
             </div>
 
-
-            <div className="py-6 bg-base-200 border border-2-bottom">
+            <div className="py-6 bg-base-200 border border-2-bottom rounded-b-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={nodeJsReq} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='nodeJsReq' />
                     </div>
-                    <div>
+                    <div className='border-l border-primary pl-4'>
                         <h1 className="text-5xl font-bold">How does NodeJs Handle multiple requests at the same time?</h1>
-                        <p className="py-6">
+                        <p className="py-6 text-justify">
                             <strong>Way nodeJs handles requests:</strong>
                             NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. EventLoop is the listener for the EventQueue.
 
@@ -98,7 +96,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </article>
     );
 };
 
