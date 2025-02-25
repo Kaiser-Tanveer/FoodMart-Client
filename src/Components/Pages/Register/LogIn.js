@@ -5,13 +5,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
 import { toast, Toaster } from 'react-hot-toast';
+import { ColorRing } from 'react-loader-spinner';
 
 const LogIn = () => {
     const { signIn } = useContext(AuthContext);
     useTitle('Login');
 
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false); // 🔥 Loading state
+    const [loading, setLoading] = useState(false);
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ const LogIn = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
         setError('');
-        setLoading(true); // Start loading 🔄
+        setLoading(true);
         
         const form = e.target;
         const email = form.email.value;
@@ -29,15 +30,13 @@ const LogIn = () => {
 
         try {
             const result = await signIn(email, password);
-            console.log(result.user);
             toast.success('Logged in Successfully!');
             form.reset();
             navigate(from, { replace: true });
+            setLoading(false);
         } catch (err) {
             setError(err.message);
-            console.log(err);
         } finally {
-            setLoading(false); // Stop loading ✅
         }
     };
 
@@ -72,7 +71,18 @@ const LogIn = () => {
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary flex items-center justify-center">
                                         {loading ? (
-                                            <span className="loading loading-spinner text-white mx-auto b bg-primary">Loading...</span>
+                                            <>
+                                            <ColorRing
+                                            visible={true}
+                                            height="30"
+                                            width="30"
+                                            ariaLabel="color-ring-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClass="color-ring-wrapper"
+                                            colors={['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']}
+                                            />
+                                                <span className='mr-2 animate-pulse'>Loading ...</span>
+                                            </>
                                         ) : (
                                             'Login'
                                         )}
