@@ -41,7 +41,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom">
+            <div className="py-4 bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={jwt} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='jwt' />
