@@ -15,10 +15,10 @@ const Blog = () => {
             <div className="bg-base-200 border border-2-bottom py-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={sql} className="max-w-sm rounded-t-lg" alt='sql' />
-                        <img src={noSql} className="max-w-sm rounded-b-lg" alt='noSql' />
+                        <img src={sql} className="max-w-sm" alt='sql' />
+                        <img src={noSql} className="max-w-sm" alt='noSql' />
                     </div>
-                    <div className='border-l border-primary pl-4'>
+                    <div className='border-t md:border-t-0 md:border-l border-primary pt-4 md:pt-0 md:pl-4'>
                         <h1 className="text-5xl font-bold">Difference Between SQL and NoSQL</h1>
                         <p className="py-6 text-justify">
                             <strong>SQL:</strong>
@@ -44,9 +44,9 @@ const Blog = () => {
             <div className="py-6 bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={jwt} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='jwt' />
+                        <img src={jwt} className="max-w-sm w-80 h-full" alt='jwt' />
                     </div>
-                    <div className='border-l border-primary pl-4'>
+                    <div className='border-t md:border-t-0 md:border-l border-primary pt-4 md:pt-0 md:pl-4'>
                         <h1 className="text-5xl font-bold">What's JWT? How does it works?</h1>
                         <p className="py-6 text-justify">
                             <strong>JWT:</strong>
@@ -63,10 +63,10 @@ const Blog = () => {
             <div className="py-6 hero min-h-screen bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={js} className="max-w-sm rounded-lg shadow-2xl" alt='js' />
-                        <img src={nodeJs} className="max-w-sm rounded-lg shadow-2xl" alt='nodeJs' />
+                        <img src={js} className="max-w-sm" alt='js' />
+                        <img src={nodeJs} className="max-w-sm" alt='nodeJs' />
                     </div>
-                    <div className='border-l border-primary pl-4'>
+                    <div className='border-t md:border-t-0 md:border-l border-primary pt-4 md:pt-0 md:pl-4'>
                         <h1 className="text-5xl font-bold">Difference between JavaScript and NodeJs</h1>
                         <p className="py-6 text-justify">
                             <strong>JavaScript:</strong>
@@ -83,9 +83,9 @@ const Blog = () => {
             <div className="py-6 bg-base-200 border border-2-bottom rounded-b-lg">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
-                        <img src={nodeJsReq} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='nodeJsReq' />
+                        <img src={nodeJsReq} className="max-w-sm w-80 h-full" alt='nodeJsReq' />
                     </div>
-                    <div className='border-l border-primary pl-4'>
+                    <div className='border-t md:border-t-0 md:border-l border-primary pt-4 md:pt-0 md:pl-4'>
                         <h1 className="text-5xl font-bold">How does NodeJs Handle multiple requests at the same time?</h1>
                         <p className="py-6 text-justify">
                             <strong>Way nodeJs handles requests:</strong>
