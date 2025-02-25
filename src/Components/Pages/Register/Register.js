@@ -1,21 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './FormBG.css';
 import { FaUser, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../DynamicTitle/DynamicTitle';
 import { toast, Toaster } from 'react-hot-toast';
+import { ColorRing } from 'react-loader-spinner';
 
 const Register = () => {
     const { createUser, googleLogIn } = useContext(AuthContext);
     useTitle('Register');
-
     const location = useLocation();
-    const navigate = useNavigate();
+    const navigate = useNavigate();    
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    
     const from = location.state?.from?.pathname || '/';
 
     const submitHandler = e => {
         e.preventDefault();
+        setError('');
+        setLoading(true);
         const form = e.target;
         const name = `${form.fName.value} ${form.lName.value}`;
         const email = form.email.value;
@@ -24,8 +29,8 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 navigate(from, { replace: true });
+                setLoading(false);
                 user.displayName = name;
                 form.reset();
             })
@@ -71,7 +76,24 @@ const Register = () => {
                                     <p className='text-left'>Already have an account? <Link to='/logIn' className='link-hover text-primary'>Sign In</Link></p>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Register</button>
+                                    <button className="btn btn-primary flex items-center justify-center">
+                                        {loading ? (
+                                            <>
+                                            <ColorRing
+                                            visible={true}
+                                            height="30"
+                                            width="30"
+                                            ariaLabel="color-ring-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClass="color-ring-wrapper"
+                                            colors={['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']}
+                                            />
+                                                <span className='mr-2 animate-pulse'>Loading ...</span>
+                                            </>
+                                        ) : (
+                                            'Register'
+                                        )}
+                                    </button>
                                 </div>
                                 <div className='pt-10 grid grid-cols-3 items-center mx-auto'>
                                     <div>
