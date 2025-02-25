@@ -61,7 +61,7 @@ const Blog = () => {
             </div>
 
 
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
+            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={js} className="max-w-sm rounded-lg shadow-2xl" alt='js' />
@@ -82,7 +82,7 @@ const Blog = () => {
             </div>
 
 
-            <div className="py-6 bg-base-200 border border-2-bottom pb-10">
+            <div className="py-6 bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={nodeJsReq} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='nodeJsReq' />
