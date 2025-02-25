@@ -12,7 +12,7 @@ const Blog = () => {
     return (
         <>
             <h1 className='text-5xl font-bold pt-12 pb-4 bg-light'><span className='text-primary'>Blog</span> Section</h1>
-            <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
+            <div className="bg-base-200 border border-2-bottom py-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={sql} className="max-w-sm rounded-lg shadow-2xl" alt='sql' />
@@ -41,7 +41,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <div className="py-4 bg-base-200 border border-2-bottom">
+            <div className="py-6 bg-base-200 border border-2-bottom">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
                         <img src={jwt} className="max-w-sm w-80 rounded-lg shadow-2xl" alt='jwt' />
