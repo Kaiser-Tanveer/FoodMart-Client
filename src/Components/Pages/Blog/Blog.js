@@ -11,7 +11,7 @@ const Blog = () => {
     useTitle('Blog');
     return (
         <>
-            <h1 className='text-5xl font-bold pb-10 bg-light'><span className='text-primary'>Blog</span> Section</h1>
+            <h1 className='text-5xl font-bold pt-12 pb-4 bg-light'><span className='text-primary'>Blog</span> Section</h1>
             <div className="hero min-h-screen bg-base-200 border border-2-bottom py-10">
                 <div className="hero-content flex-col lg:flex-row">
                     <div>
