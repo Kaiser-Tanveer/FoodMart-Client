@@ -42,7 +42,7 @@ const Header = () => {
                 {
                     user?.uid ?
                         <>
-                            <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-sm btn-error text-white">Log Out</button>
+                            <button onClick={() => logOut().then(() => { }).then(err => console.error(err))} className="btn btn-outline btn-error text-white">Log Out</button>
                         </>
                         :
                         <Link to='/register'><button className="btn btn-outline btn-primary">Register</button></Link>
